@@ -6,8 +6,8 @@ const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
 export const saveLineUser = async (name: string, userId: string) => {
     await sql`
-    INSERT INTO members ("lineName", "lineId")
-    VALUES (${name}, ${userId})
+    INSERT INTO members ("name", "lineName", "lineId")
+    VALUES (null, ${name}, ${userId})
     ON CONFLICT ("lineId") DO UPDATE 
     SET "lineName" = EXCLUDED."lineName";
   `;
