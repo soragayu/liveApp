@@ -7,7 +7,7 @@ export const useLiff = () => {
         liff.init({ liffId: process.env.NEXT_PUBLIC_LIFF_ID! }).then(async () => {
             if (liff.isLoggedIn()) {
                 const profile = await liff.getProfile();
-                await saveLineUser(profile.userId, profile.displayName);
+                await saveLineUser(profile.displayName, profile.userId);
             } else {
                 liff.login();
             }
