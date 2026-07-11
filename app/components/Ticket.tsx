@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useLiff } from "@/app/lib/useLiff";
 import { fetchMembersIdByLineId } from "@/app/lib/actions";
-import { pridi } from "@/app/ui/fonts";
+import { zenmarugothic } from "@/app/ui/fonts";
 
 const Ticket = () => {
 
@@ -30,8 +30,8 @@ const Ticket = () => {
             <div className="w-full p-[10px] flex gap-[10px]">
                 <Image src="/live1.png" width={1080} height={1920} alt="live1" className="w-[106px] h-[188px]" />
                 <div className="flex-1 flex flex-col items-center justify-center gap-[13px] px-[21px] py-[7px]">
-                    <p className={`${pridi.className} text-[24px] leading-[100%] tracking-[-1%]`}>ぶちあげLIVE</p>
-                    <p className={`${pridi.className} text-[24px] leading-[100%] tracking-[-1%]`}>Ocean編</p>
+                    <p className={`${zenmarugothic.className} text-[24px] leading-[100%] tracking-[-1%]`}>ぶちあげLIVE</p>
+                    <p className={`${zenmarugothic.className} text-[24px] leading-[100%] tracking-[-1%]`}>Ocean編</p>
                 </div>
             </div>
         </Link>
