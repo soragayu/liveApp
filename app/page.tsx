@@ -10,18 +10,9 @@ const Home = () => {
   return (
     <div className="w-full py-[22px] px-[20px] flex flex-col items-center">
       <LiffInitializer />
-      {/* ヘッダー */}
-      <div className="w-full px-[30px] flex justify-between">
-        <p className={`text-[10px] tracking-[-4%] leading-[120%] ${pridi.className}`}>MY PAGE</p>
-        <p className={`text-[10px] tracking-[--4%] leading-[120%] ${pridi.className}`}>MORE INFORMATION</p>
-      </div>
       {/* タイトル */}
       <div className="w-full flex flex-col items-center gap-[24px]">
         <p className={`${darumadrop.className} text-[64px] text-[#1E1E1E] tracking-[10%] leading-[120%]`}>TICKETS</p>
-        <div className="w-full px-[30px] flex items-center justify-between ">
-          <p className={`${pridi.className} text-[14px] leading-[120%] tracking-[-2%]`}>ぶちあげLIVE</p>
-          <p className={` ${pridi.className} text-[12px] leading-[120%] tracking-[-2%]`}>@nonsensefashion</p>
-        </div>
       </div>
       {/* メイン */}
       <div className="w-full pt-[50px] pb-[10px] px-[10px] flex flex-col items-center gap-[10px]">
