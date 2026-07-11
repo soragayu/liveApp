@@ -1,15 +1,17 @@
+'use client'
 import Image from "next/image";
-import Link from "next/link";
-import { LiffInitializer } from "@/app/components/LiffInitializer";
+import { useLiff } from "@/app/lib/useLiff";
+import { Ticket } from "./components/Ticket";
 import { darumadrop } from "./ui/fonts";
 import { pridi } from "./ui/fonts";
 
 
 const Home = () => {
+
+  useLiff();
+
   return (
     <div className="w-full py-[22px] px-[20px] flex flex-col items-center">
-      {/* カスタムフック */}
-      <LiffInitializer />
       {/* ヘッダー */}
       <div className="w-full px-[30px] flex justify-between">
         <p className={`text-[10px] tracking-[-4%] leading-[120%] ${pridi.className}`}>MY PAGE</p>
@@ -29,15 +31,9 @@ const Home = () => {
         {/* チケッツ */}
         <div className="w-full flex flex-col items-start gap-[10px]">
           {/* チケット */}
+          <Ticket />
           <div className="w-full p-[10px] flex gap-[10px]">
-            <Link href="/ticket"><Image src="/live1.png" width={106} height={188} alt="live1" /></Link>
-            <div className="flex-1 flex flex-col items-center justify-center gap-[13px] px-[21px] py-[7px]">
-              <p className={`${pridi.className} text-[24px] leading-[100%] tracking-[-1%]`}>ぶちあげLIVE</p>
-              <p className={`${pridi.className} text-[24px] leading-[100%] tracking-[-1%]`}>Ocean編</p>
-            </div>
-          </div>
-          <div className="w-full p-[10px] flex gap-[10px]">
-            <Image src="/livealt.png" width={106} height={188} alt="livealt" />
+            <Image src="/live1alt.png" width={1080} height={1920} alt="livealt" className="w-[106px] h-[188px]" />
             <div className="flex-1 flex flex-col items-center justify-center gap-[13px] px-[21px] py-[7px]">
               <p className={`${pridi.className} text-[24px] leading-[100%] tracking-[-1%]`}>comingsoon...</p>
               <p className={`${pridi.className} text-[24px] leading-[100%] tracking-[-1%]`}>？？？編</p>
