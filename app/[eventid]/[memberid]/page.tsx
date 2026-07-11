@@ -10,9 +10,9 @@ const TicketPage = async ({ params }: PageProps) => {
     const eid = Number(eventid);
     const mid = Number(memberid);
 
-    const ticketStatus = await hasTicket(eid, mid);
+    // const ticketStatus = await hasTicket(eid, mid);
 
-    console.log(ticketStatus);
+    // console.log(ticketStatus);
 
 
     return (
