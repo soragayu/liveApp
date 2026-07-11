@@ -11,21 +11,22 @@ const Home = () => {
     <div className="w-full py-[22px] px-[20px] flex flex-col items-center">
       <LiffInitializer />
       {/* タイトル */}
-      <div className="w-full flex flex-col items-center gap-[24px]">
-        <p className={`${darumadrop.className} text-[64px] text-[#1E1E1E] tracking-[10%] leading-[120%]`}>TICKETS</p>
+      <div className="bg-[url('/bg.jpg')] bg-cover bg-center bg-fixed w-full flex flex-col items-center gap-[24px]">
+        <p className={`${darumadrop.className} text-[64px] text-white tracking-[10%] leading-[120%]`}>TICKETS</p>
       </div>
       {/* メイン */}
       <div className="w-full pt-[50px] pb-[10px] px-[10px] flex flex-col items-center gap-[10px]">
-        <p className={`${zenmarugothic.className} text-[24px] font-bold leading-[110%] tracking-[-2%]`}>出演メモリー</p>
+        <p className={`${zenmarugothic.className} text-[24px] text-white font-bold leading-[110%] tracking-[-2%]`}>出演メモリー</p>
         {/* チケッツ */}
         <div className="w-full flex flex-col items-start gap-[10px]">
           {/* チケット */}
           <Ticket />
           <div className="w-full p-[10px] flex gap-[10px]">
-            <Image src="/live1alt.png" width={1080} height={1920} alt="livealt" className="w-[106px] h-[188px]" />
+            <Image src="/live1alt.png" width={1080} height={1920} alt="livealt" className="w-[190.8px] h-[338.4px]" />
             <div className="flex-1 flex flex-col items-center justify-center gap-[13px] px-[21px] py-[7px]">
-              <p className={`${zenmarugothic.className} text-[24px] leading-[100%] tracking-[-1%]`}>coming soon...</p>
-              <p className={`${zenmarugothic.className} text-[24px] leading-[100%] tracking-[-1%]`}>？？？編</p>
+              <p className={`${zenmarugothic.className} text-[12px] text-white leading-[100%] tracking-[-1%]`}>coming</p>
+              <p className={`${zenmarugothic.className} text-[12px] text-white leading-[100%] tracking-[-1%]`}>soon...</p>
+              <p className={`${zenmarugothic.className} text-[12px] text-white leading-[100%] tracking-[-1%]`}>？？？編</p>
             </div>
           </div>
         </div>
