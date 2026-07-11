@@ -17,7 +17,7 @@ const Ticket = () => {
             const getMemberId = async () => {
                 const id = await fetchMembersIdByLineId(lineId);
                 setMembersId(id);
-                console.log(membersId);
+                console.log(id);
             }
 
             getMemberId();
