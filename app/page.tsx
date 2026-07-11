@@ -1,17 +1,15 @@
 'use client'
 import Image from "next/image";
-import { useLiff } from "@/app/lib/useLiff";
 import { Ticket } from "./components/Ticket";
 import { darumadrop } from "./ui/fonts";
 import { pridi } from "./ui/fonts";
+import { LiffInitializer } from "./components/LiffInitializer";
 
 
 const Home = () => {
-
-  useLiff();
-
   return (
     <div className="w-full py-[22px] px-[20px] flex flex-col items-center">
+      <LiffInitializer />
       {/* ヘッダー */}
       <div className="w-full px-[30px] flex justify-between">
         <p className={`text-[10px] tracking-[-4%] leading-[120%] ${pridi.className}`}>MY PAGE</p>
