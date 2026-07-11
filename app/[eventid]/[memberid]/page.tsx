@@ -14,14 +14,14 @@ const TicketPage = async ({ params }: PageProps) => {
         return (
             <div className="bg-[url('/bg.jpg')] bg-cover bg-center bg-fixed w-full h-screen flex justify-center items-center ">
                 <div className="relative">
-                    <Image src={`/ticket${eventid}.png`} width={1080} height={1920} alt="ticket" className="w-full h-auto" />
+                    <Image src={`/ticket${eventid}.png`} width={1080} height={1920} alt="ticket" className="w-full h-auto animate-fade-in-up" />
                 </div>
             </div>
         )
     } else {
         return (
             <div className="bg-[url('/bg.jpg')] bg-cover bg-center bg-fixed w-full h-screen flex justify-center items-center ">
-                <Image src={`/ticket${eventid}alt.png`} width={1080} height={1920} alt="ticket" className="w-full h-auto" />
+                <Image src={`/ticket${eventid}alt.png`} width={1080} height={1920} alt="ticket" className="w-full h-auto animate-fade-in-up" />
             </div>
         )
     }
