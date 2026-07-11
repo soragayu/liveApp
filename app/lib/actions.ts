@@ -15,11 +15,11 @@ export const saveLineUser = async (lineName: string, lineId: string) => {
 
 export const hasTicket = async (eventId: string, memberId: string) => {
   const data = await sql`
-    SELECT COUNT(id)
+    SELECT *
     FROM livePerformers
     WHERE "eventId" = ${eventId} AND "memberId" = ${memberId}
   `;
-  return data
+  return data.length > 0;
 }
 
 
