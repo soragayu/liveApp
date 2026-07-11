@@ -7,20 +7,10 @@ type PageProps = {
 
 const TicketPage = async ({ params }: PageProps) => {
     const { eventid, memberid } = await params;
-    const eid = Number(eventid);
-    const mid = Number(memberid);
 
-    let ticketStatus = false;
-    let error: string | null = null;
-    try {
-        ticketStatus = await hasTicket(eid, mid);
-    } catch (e) {
-        error = e instanceof Error ? e.message : String(e);
-    }
+    const data = await hasTicket(eventid, memberid);
+    console.log(data);
 
-    if (error) {
-        return <div className="p-4 text-red-500">Error: {error}</div>;
-    }
 
     return (
         <div className="w-full h-screen flex justify-center items-center ">
