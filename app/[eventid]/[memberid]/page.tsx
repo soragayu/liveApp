@@ -23,7 +23,7 @@ const TicketPage = async ({ params }: PageProps) => {
         return (
             <div className="w-full h-screen flex justify-center items-center ">
                 <Image src={`/ticket${eventid}alt.png`} width={1080} height={1920} alt="ticket" className="w-full h-auto" />
-                <p className="text-[20vw] absolute bottom-[15vw] left-[10vw]">ナナヲアカリ</p>
+                <p className="text-[5vw] absolute bottom-[5vw] left-[5vw]">ナナヲアカリ</p>
             </div>
         )
     }
