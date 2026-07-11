@@ -17,7 +17,6 @@ const Ticket = () => {
             const getMemberId = async () => {
                 const id = await fetchMembersIdByLineId(lineId);
                 setMembersId(id);
-                console.log(id);
             }
 
             getMemberId();
@@ -27,7 +26,7 @@ const Ticket = () => {
 
 
     return (
-        <Link href={`/${membersId}`}>
+        <Link href={`/1/${membersId}`}>
             <div className="w-full p-[10px] flex gap-[10px]">
                 <Image src="/live1.png" width={1080} height={1920} alt="live1" className="w-[106px] h-[188px]" />
                 <div className="flex-1 flex flex-col items-center justify-center gap-[13px] px-[21px] py-[7px]">
