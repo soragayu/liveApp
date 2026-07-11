@@ -12,7 +12,7 @@ const Home = () => {
       <LiffInitializer />
       {/* タイトル */}
       <div className="w-full flex flex-col items-center gap-[24px]">
-        <p className={`${darumadrop.className} text-[64px] text-white tracking-[10%] leading-[120%]`}>TICKETS</p>
+        <p className={`${darumadrop.className} animate-fade-in-up text-[64px] text-white tracking-[10%] leading-[120%]`}>TICKETS</p>
       </div>
       {/* メイン */}
       <div className="w-full pt-[50px] pb-[10px] px-[10px] flex flex-col items-center gap-[10px]">
