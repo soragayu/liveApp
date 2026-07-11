@@ -9,18 +9,18 @@ import { pridi } from "@/app/ui/fonts";
 const Ticket = () => {
 
     const { lineName, lineId } = useLiff();
-    const [memberId, setMemberId] = useState<number | null>(null);
+    const [membersId, setMembersId] = useState<number | null>(null);
 
     useEffect(() => {
         if (lineId != null) {
 
             const getMemberId = async () => {
                 const id = await fetchMembersIdByLineId(lineId);
-                setMemberId(id);
+                setMembersId(id);
+                console.log(membersId);
             }
 
             getMemberId();
-            console.log(memberId);
         }
     }, [lineId])
 
