@@ -20,6 +20,7 @@ const Ticket = () => {
             }
 
             getMemberId();
+            console.log(memberId);
         }
     }, [lineId])
 
