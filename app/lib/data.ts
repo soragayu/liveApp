@@ -1,19 +1,12 @@
-'use server'
 import postgres from "postgres";
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
-const fetchMembersIdByLineId = async (lineId: string) => {
+export const hasTicket = async (eventId: number, memberId: number) => {
     const data = await sql`
-    SELECT id 
-    FROM members
-    WHERE "lineId" = ${lineId}
-    `;
-    if (data.length > 0) {
-        return data[0].id as number;
-    } else {
-        return null;
-    }
+    SELECT *
+    FROM livePerformers
+    WHERE "eventId" = ${eventId} AND "memberId" = ${memberId}
+  `;
+    return data.length > 0;
 }
-
-export { fetchMembersIdByLineId };

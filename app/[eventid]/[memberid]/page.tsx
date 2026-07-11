@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { hasTicket } from "@/app/lib/actions";
+import { hasTicket } from "@/app/lib/data";
 
 type PageProps = {
     params: Promise<{ eventid: string, memberid: string }>

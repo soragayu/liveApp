@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useLiff } from "@/app/lib/useLiff";
-import { fetchMembersIdByLineId } from "@/app/lib/data";
+import { fetchMembersIdByLineId } from "@/app/lib/actions";
 import { pridi } from "@/app/ui/fonts";
 
 const Ticket = () => {

@@ -13,13 +13,17 @@ export const saveLineUser = async (lineName: string, lineId: string) => {
   `;
 };
 
-export const hasTicket = async (eventId: number, memberId: number) => {
+export const fetchMembersIdByLineId = async (lineId: string) => {
   const data = await sql`
-    SELECT *
-    FROM livePerformers
-    WHERE "eventId" = ${eventId} AND "memberId" = ${memberId}
-  `;
-  return data.length > 0;
+    SELECT id 
+    FROM members
+    WHERE "lineId" = ${lineId}
+    `;
+  if (data.length > 0) {
+    return data[0].id as number;
+  } else {
+    return null;
+  }
 }
 
 
