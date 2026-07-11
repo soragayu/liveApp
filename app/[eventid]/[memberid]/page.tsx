@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { hasTicket } from "@/app/lib/actions";
 
 type PageProps = {
     params: Promise<{ eventid: string, memberid: string }>
@@ -6,7 +7,10 @@ type PageProps = {
 
 const TicketPage = async ({ params }: PageProps) => {
     const { eventid, memberid } = await params;
-    console.log(eventid, memberid);
+    const ticketStatus = await hasTicket(eventid, memberid);
+
+    console.log(ticketStatus);
+
 
     return (
         <div className="w-full h-screen flex justify-center items-center ">
