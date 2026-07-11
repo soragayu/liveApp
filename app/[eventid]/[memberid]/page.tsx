@@ -13,13 +13,13 @@ const TicketPage = async ({ params }: PageProps) => {
     if (check) {
         return (
             <div className="w-full h-screen flex justify-center items-center ">
-                <Image src="/ticket1.png" width={1080} height={1920} alt="ticket" className="w-full" />
+                <Image src={`/ticket${eventid}.png`} width={1080} height={1920} alt="ticket" className="w-full" />
             </div>
         )
     } else {
         return (
             <div className="w-full h-screen flex justify-center items-center ">
-                <Image src="/ticket1alt.png" width={1080} height={1920} alt="ticket" className="w-full" />
+                <Image src={`/ticket${eventid}alt.png`} width={1080} height={1920} alt="ticket" className="w-full" />
             </div>
         )
     }
