@@ -7,7 +7,10 @@ type PageProps = {
 
 const TicketPage = async ({ params }: PageProps) => {
     const { eventid, memberid } = await params;
-    const ticketStatus = await hasTicket(eventid, memberid);
+    const eid = Number(eventid);
+    const mid = Number(memberid);
+
+    const ticketStatus = await hasTicket(eid, mid);
 
     console.log(ticketStatus);
 
