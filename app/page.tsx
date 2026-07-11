@@ -8,10 +8,10 @@ import { LiffInitializer } from "./components/LiffInitializer";
 
 const Home = () => {
   return (
-    <div className="w-full py-[22px] px-[20px] flex flex-col items-center">
+    <div className="bg-[url('/bg.jpg')] bg-cover bg-center bg-fixed w-full py-[22px] px-[20px] flex flex-col items-center">
       <LiffInitializer />
       {/* タイトル */}
-      <div className="bg-[url('/bg.jpg')] bg-cover bg-center bg-fixed w-full flex flex-col items-center gap-[24px]">
+      <div className="w-full flex flex-col items-center gap-[24px]">
         <p className={`${darumadrop.className} text-[64px] text-white tracking-[10%] leading-[120%]`}>TICKETS</p>
       </div>
       {/* メイン */}
