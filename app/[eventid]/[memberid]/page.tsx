@@ -8,15 +8,20 @@ type PageProps = {
 const TicketPage = async ({ params }: PageProps) => {
     const { eventid, memberid } = await params;
 
-    const data = await hasTicket(eventid, memberid);
-    console.log(data);
+    const check = await hasTicket(eventid, memberid);
 
-
-    return (
-        <div className="w-full h-screen flex justify-center items-center ">
-            <Image src="/ticket1.png" width={1080} height={1920} alt="ticket" className="w-full" />
-
-        </div>
-    )
+    if (check) {
+        return (
+            <div className="w-full h-screen flex justify-center items-center ">
+                <Image src="/ticket1.png" width={1080} height={1920} alt="ticket" className="w-full" />
+            </div>
+        )
+    } else {
+        return (
+            <div className="w-full h-screen flex justify-center items-center ">
+                <Image src="/ticket1alt.png" width={1080} height={1920} alt="ticket" className="w-full" />
+            </div>
+        )
+    }
 }
 export default TicketPage;
