@@ -24,7 +24,7 @@ const Home = () => {
           <div className="w-full p-[10px] flex gap-[10px]">
             <Image src="/live1alt.png" width={1080} height={1920} alt="livealt" className="w-[106px] h-[188px]" />
             <div className="flex-1 flex flex-col items-center justify-center gap-[13px] px-[21px] py-[7px]">
-              <p className={`${pridi.className} text-[24px] leading-[100%] tracking-[-1%]`}>comingsoon...</p>
+              <p className={`${pridi.className} text-[24px] leading-[100%] tracking-[-1%]`}>coming soon...</p>
               <p className={`${pridi.className} text-[24px] leading-[100%] tracking-[-1%]`}>？？？編</p>
             </div>
           </div>
