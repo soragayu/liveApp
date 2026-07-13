@@ -5,15 +5,15 @@ import { saveLineUser } from "@/app/lib/actions";
 import { saveLivePerformer } from "@/app/lib/actions";
 
 const JoinLive = () => {
-    const { lineId, lineName } = useLiff();
+    const { lineName, lineId } = useLiff();
     const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
 
     useEffect(() => {
-        if (lineId != null && lineName != null) {
+        if (lineName != null && lineId != null) {
 
             const joinData = async () => {
                 try {
-                    const saveLineUserData = await saveLineUser(lineId, lineName);
+                    const saveLineUserData = await saveLineUser(lineName, lineId);
                     const memberid = saveLineUserData[0].id;
                     const eventid = 1;
                     await saveLivePerformer(memberid, eventid);
