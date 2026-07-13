@@ -1,5 +1,7 @@
-export const join = () => {
+const join = () => {
     return (
-        <div></div>
+        <div>こんにちは</div>
     )
 }
+
+export default join;
