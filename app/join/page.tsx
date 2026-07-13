@@ -1,6 +1,8 @@
+import JoinLive from "@/app/components/JoinLive";
+
 const join = () => {
     return (
-        <div>こんにちは</div>
+        <JoinLive />
     )
 }
 
