@@ -32,13 +32,22 @@ export const fetchMembersIdByLineId = async (lineId: string) => {
 
 // メンバーidをlivePerformersテーブルに登録
 export const saveLivePerformer = async (memberid: number, eventid: number) => {
-  const data = await sql`
+  const data1 = await sql`
     SELECT *
     FROM livePerformers
     WHERE memberid = ${memberid}
     AND eventid = ${eventid}
   `;
-  return data;
+
+  if (data1.length === 0) {
+    await sql`
+    INSERT INTO livePerformers (memberid, eventid)
+    VALUES (${memberid}, ${eventid})
+    `;
+    return null;
+  } else {
+    return null;
+  }
 }
 
 
