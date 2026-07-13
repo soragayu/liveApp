@@ -10,7 +10,8 @@ export const saveLineUser = async (lineName: string, lineId: string) => {
     INSERT INTO members (name, linename, lineid)
     VALUES (null, ${lineName}, ${lineId})
     ON CONFLICT (lineid) DO UPDATE 
-    SET linename = EXCLUDED.linename;
+    SET linename = EXCLUDED.linename
+    RETURNING *;
   `;
   return data;
 };
