@@ -31,7 +31,7 @@ export const fetchMembersIdByLineId = async (lineId: string) => {
 }
 
 // メンバーidをlivePerformersテーブルに登録
-export const saveLivePerformer = async (memberid: number, eventid: string) => {
+export const saveLivePerformer = async (memberid: number, eventid: number) => {
   const data = await sql`
     SELECT *
     FROM livePerformers
