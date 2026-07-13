@@ -5,12 +5,12 @@ import { useEffect } from "react";
 import { saveLineUser } from "@/app/lib/actions";
 
 export const LiffInitializer = () => {
-    const { lineId, lineName } = useLiff();
+    const { lineName, lineId } = useLiff();
 
     useEffect(() => {
-        if (lineId != null && lineName != null) {
+        if (lineName != null && lineId != null) {
             saveLineUser(lineName, lineId);
         }
-    }, [lineId, lineName])
+    }, [lineName, lineId])
     return null;
 };

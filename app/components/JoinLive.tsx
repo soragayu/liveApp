@@ -25,7 +25,7 @@ const JoinLive = () => {
 
             joinData();
         }
-    }, [lineId, lineName])
+    }, [lineName, lineId])
 
     if (status === 'loading') {
         return <div>loading...</div>;
