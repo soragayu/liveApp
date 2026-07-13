@@ -6,14 +6,28 @@ const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
 // ラインidからメンバーを登録する
 export const saveLineUser = async (lineName: string, lineId: string) => {
-  const data = await sql`
+  const data1 = await sql`
+    SELECT *
+    FROM members
+    WHERE lineid = ${lineId}
+  `;
+
+  if (data1.length === 0) {
+    const data2 = await sql`
     INSERT INTO members (name, linename, lineid)
     VALUES (null, ${lineName}, ${lineId})
-    ON CONFLICT (lineid) DO UPDATE 
-    SET linename = EXCLUDED.linename
     RETURNING *;
-  `;
-  return data;
+    `;
+    return data2;
+  } else {
+    const data2 = await sql`
+    UPDATE members 
+    SET linename = ${lineName}
+    WHERE lineid = ${lineId}
+    RETURNING *;
+    `;
+    return data2;
+  }
 };
 
 // ラインidからメンバーidを取得する
