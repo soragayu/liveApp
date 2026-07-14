@@ -48,7 +48,7 @@ export const fetchMembersIdByLineId = async (lineId: string) => {
 export const saveLivePerformer = async (memberid: number, eventid: number) => {
   const data1 = await sql`
     SELECT *
-    FROM livePerformers
+    FROM liveperformers
     WHERE memberid = ${memberid}
     AND eventid = ${eventid}
   `;
