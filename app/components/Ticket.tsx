@@ -9,14 +9,14 @@ import { zenmarugothic } from "@/app/ui/fonts";
 const Ticket = () => {
 
     const { lineName, lineId } = useLiff();
-    const [membersId, setMembersId] = useState<number | null>(null);
+    const [membersid, setMembersid] = useState<number | null>(null);
 
     useEffect(() => {
         if (lineId != null) {
 
             const getMemberId = async () => {
                 const id = await fetchMembersIdByLineId(lineId);
-                setMembersId(id);
+                setMembersid(id);
             }
 
             getMemberId();
@@ -26,7 +26,7 @@ const Ticket = () => {
 
 
     return (
-        <Link href={`/1/${membersId}`}>
+        <Link href={`/1/${membersid}`}>
             <div className="w-full p-[10px] flex gap-[10px]">
                 <Image src="/live1.png" width={1080} height={1920} alt="live1" className="animate-fade-in-up w-[190.8px] h-[338.4px]" />
                 <div className="flex-1 flex flex-col items-center justify-center gap-[13px] px-[21px] py-[7px]">
