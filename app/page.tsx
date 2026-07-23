@@ -9,7 +9,7 @@ import { LiffInitializer } from "./components/LiffInitializer";
 const Home = () => {
   return (
     <div className="w-full py-[22px] px-[20px] flex flex-col items-center">
-      <Image src="/bg.jpg" alt="bg" width={768} height={1376} className="object-cover" fill />
+      <Image src="/bg.jpg" alt="bg" width={768} height={1376} className="fixed top-0 left-0 w-full" />
       <LiffInitializer />
       {/* タイトル */}
       <div className="w-full flex flex-col items-center gap-[24px]">
